@@ -1,0 +1,46 @@
+class CfgPatches
+{
+	class WasteBren
+	{
+		units[]={};
+		weapons[]=
+		{
+			"SNAFU_Bren"
+		};
+		requiredVersion=0.1;
+		requiredAddons[]=
+		{
+			"DZ_Weapons_Firearms",
+			"SNAFU_Bren"			
+		};
+		magazines[]=
+		{
+			"SNAFU_Bren_30rdMag"
+		};
+	};
+};
+class cfgWeapons
+{
+	class Rifle_Base;
+	class SNAFU_Bren_Base: Rifle_Base
+	{
+		scope=0;
+		chamberableFrom[]=
+		{
+			"TTC_Ammo_303"
+		};
+	};
+};
+class cfgMagazines
+{
+	class Magazine_Base;
+	class SNAFU_Bren_30rdMag: Magazine_Base
+	{
+		scope=2;
+		ammo="TTC_Ammo_303";
+		ammoItems[]=
+		{
+			"TTC_Ammo_303"
+		};
+	};
+};
